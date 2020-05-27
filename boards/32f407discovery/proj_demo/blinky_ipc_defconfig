@@ -1,0 +1,429 @@
+#
+# Automatically generated file; DO NOT EDIT.
+# Wookey configuration
+#
+
+#
+# General Setup
+#
+CONFIG_PROJ_NAME="demo"
+CONFIG_PROJ_FILES="."
+CONFIG_BIN_NAME="$(CONFIG_PROJ_NAME).bin"
+CONFIG_HEX_NAME="$(CONFIG_PROJ_NAME).hex"
+CONFIG_ELF_NAME="$(CONFIG_PROJ_NAME).elf"
+CONFIG_BUILD_DIR="build"
+CONFIG_PRIVATE_DIR="private"
+
+#
+# Micro-Kernel configuration
+#
+
+#
+# Board Support Package
+#
+
+#
+# Board setup
+#
+CONFIG_DISCO407=y
+# CONFIG_DISCO429 is not set
+# CONFIG_WOOKEY is not set
+CONFIG_BOARD_RELEASE=""
+
+#
+# SoC and Core setup
+#
+CONFIG_STM32F4=y
+CONFIG_STM32F407=y
+CONFIG_RAM_SLOT_SIZE=16384
+CONFIG_CORE_FREQUENCY=168000
+CONFIG_ARCH_ARMV7M=y
+CONFIG_ARCH_CORTEX_M4=y
+# CONFIG_ARCH_CORTEX_M3 is not set
+CONFIG_ARCH="armv7-m"
+CONFIG_ADA_ARCH="arm-eabi"
+CONFIG_ADA_PROFILE="zfp-stm32f4"
+CONFIG_BOARDNAME="32f407discovery"
+CONFIG_SOCNAME="stm32f407"
+CONFIG_CORENAME="cortex-m4"
+CONFIG_MAXTASKS=8
+CONFIG_AFLAGS_GCC="-mlittle-endian -mthumb -mcpu=cortex-m4 -mfloat-abi=soft -fPIC -fpie"
+CONFIG_AFLAGS_LLVM="--target=thumbv7m-none-eabi -mcpu=cortex-m4 -mfloat-abi=soft -mthumb -fPIC -fpie"
+CONFIG_ADAKERNEL=y
+CONFIG_KERNEL_SERIAL=y
+CONFIG_KERNEL_MODE="debug"
+CONFIG_KERNEL_CONSOLE_USART1=y
+# CONFIG_KERNEL_CONSOLE_USART4 is not set
+# CONFIG_KERNEL_CONSOLE_USART6 is not set
+CONFIG_KERNEL_USART=1
+# CONFIG_KERNEL_PANIC_FAULT is not set
+CONFIG_KERNEL_PANIC_FREEZE=y
+# CONFIG_KERNEL_PANIC_REBOOT is not set
+# CONFIG_KERNEL_PANIC_WIPE is not set
+CONFIG_KERNEL_DMA_ENABLE=y
+CONFIG_KERNEL_GETCYCLES=y
+CONFIG_KERNEL_DOMAIN=y
+
+#
+# Scheduling schemes
+#
+CONFIG_SCHED_RR=y
+# CONFIG_SCHED_MLQ_RR is not set
+# CONFIG_SCHED_RAND is not set
+CONFIG_SCHED_PERIOD=10
+CONFIG_SCHED_SUPPORT_FISR=y
+# CONFIG_SCHED_SUPPORT_FIPC is not set
+CONFIG_KERN_OPTIM_SIZE=y
+# CONFIG_KERN_OPTIM_HYBRID is not set
+# CONFIG_KERN_OPTIM_PERF is not set
+CONFIG_KERN_CFLAGS="-Os"
+CONFIG_KERNEL_ADA_BUILDSIZE="size"
+
+#
+# Kernel hacking
+#
+CONFIG_KERNEL_SOFTIRQ_QUEUE_DEPTH=20
+CONFIG_DBGLEVEL=6
+CONFIG_DEBUG=y
+CONFIG_KERNEL_SCHED_DEBUG=y
+CONFIG_KERNEL_SCHED_DEBUG_BUFSIZE=1000
+CONFIG_KERNEL_EXPERT_MODE=y
+# CONFIG_KERNEL_EXP_REENTRANCY is not set
+CONFIG_KERNEL_EWOK=y
+
+#
+# Bootloader configuration
+#
+CONFIG_LOADER_SERIAL=y
+CONFIG_LOADER_CONSOLE_USART1=y
+# CONFIG_LOADER_CONSOLE_USART4 is not set
+# CONFIG_LOADER_CONSOLE_USART6 is not set
+CONFIG_LOADER_USART=1
+# CONFIG_LOADER_EXTRA_DEBUG is not set
+# CONFIG_LOADER_MOCKUP is not set
+# CONFIG_LOADER_FW_HASH_CHECK is not set
+# CONFIG_LOADER_FLASH_LOCK is not set
+# CONFIG_LOADER_FLASH_RDP_CHECK is not set
+# CONFIG_LOADER_ERASE_ON_SECBREACH is not set
+# CONFIG_LOADER_USE_BKPSRAM is not set
+# CONFIG_LOADER_USE_PVD is not set
+
+#
+# Userspace drivers and features
+#
+
+#
+# Userspace drivers library pool
+#
+# CONFIG_USR_DRV_SPI is not set
+CONFIG_USR_DRV_USART=y
+CONFIG_USR_DRV_FLASH=y
+
+#
+# Flash driver options
+#
+CONFIG_USR_DRV_FLASH_1M=y
+CONFIG_USR_DRV_FLASH_SINGLE_BANK=y
+# CONFIG_USR_DRV_DRVISO7816 is not set
+# CONFIG_USR_DRV_HASH is not set
+CONFIG_USR_DRV_USART_CFLAGS=" -I@PROJFILES@/drivers/socs/stm32f407/usart/api "
+CONFIG_USR_DRV_FLASH_CFLAGS=" -I@PROJFILES@/drivers/socs/stm32f407/flash/api "
+# CONFIG_DRV_OPTIM_NONE is not set
+# CONFIG_DRV_OPTIM_PERF1 is not set
+# CONFIG_DRV_OPTIM_PERF2 is not set
+CONFIG_DRV_OPTIM_PERF3=y
+# CONFIG_DRV_OPTIM_SIZE is not set
+CONFIG_DRIVERS_CFLAGS="-O3"
+
+#
+# Userspace utility libraries
+#
+CONFIG_USR_LIB_HMAC=y
+CONFIG_USR_LIB_STD=y
+
+#
+# Libstd configuration
+#
+CONFIG_STD_DRBG=y
+
+#
+# DRBG configuration
+#
+CONFIG_USR_LIB_DRBG_USE_HMAC_DRBG=y
+# CONFIG_STD_DRBG_ENTROPY_CPU_CYCLES is not set
+CONFIG_STD_SANITIZE_HANDLERS=y
+CONFIG_STD_MALLOC=y
+CONFIG_STD_MALLOC_LIGHT=y
+# CONFIG_STD_MALLOC_STD is not set
+# CONFIG_STD_MALLOC_BINS is not set
+CONFIG_STD_MALLOC_SIZE_LEN=16
+CONFIG_STD_MALLOC_ALIGN=1
+CONFIG_STD_MALLOC_MUTEX=y
+CONFIG_USR_LIB_CONSOLE=y
+CONFIG_USR_LIB_HMAC_CFLAGS=" -I@PROJFILES@/libs/hmac/api "
+CONFIG_USR_LIB_STD_CFLAGS=" -I@PROJFILES@/libs/std/api "
+CONFIG_USR_LIB_CONSOLE_CFLAGS=" -I@PROJFILES@/libs/console/api "
+# CONFIG_LIB_OPTIM_NONE is not set
+# CONFIG_LIB_OPTIM_PERF1 is not set
+# CONFIG_LIB_OPTIM_PERF2 is not set
+CONFIG_LIB_OPTIM_PERF3=y
+# CONFIG_LIB_OPTIM_SIZE is not set
+CONFIG_LIB_OPTIM_CFLAGS="-O3"
+
+#
+# Applications
+#
+
+#
+# Configuring Applications
+#
+
+#
+# SVCTEST custom app
+#
+# CONFIG_APP_SVCTEST is not set
+
+#
+# Devices
+#
+# CONFIG_APP_SVCTEST_PERM_DEV_DMA is not set
+CONFIG_APP_SVCTEST_PERM_DEV_CRYPTO=0
+# CONFIG_APP_SVCTEST_PERM_DEV_BUSES is not set
+# CONFIG_APP_SVCTEST_PERM_DEV_EXTI is not set
+# CONFIG_APP_SVCTEST_PERM_DEV_TIM is not set
+
+#
+# Time
+#
+CONFIG_APP_SVCTEST_PERM_TIM_GETCYCLES=0
+
+#
+# Tasking
+#
+# CONFIG_APP_SVCTEST_PERM_TSK_FISR is not set
+# CONFIG_APP_SVCTEST_PERM_TSK_FIPC is not set
+# CONFIG_APP_SVCTEST_PERM_TSK_RESET is not set
+
+#
+# Memory management
+#
+# CONFIG_APP_SVCTEST_PERM_MEM_DYNAMIC_MAP is not set
+
+#
+# LEDS custom app
+#
+CONFIG_APP_LEDS=y
+CONFIG_APP_LEDS_FW=y
+CONFIG_APP_LEDS_NUMSLOTS=1
+CONFIG_APP_LEDS_STACKSIZE=8192
+# CONFIG_APP_LEDS_SHM is not set
+
+#
+# Permissions
+#
+
+#
+# Devices
+#
+# CONFIG_APP_LEDS_PERM_DEV_DMA is not set
+CONFIG_APP_LEDS_PERM_DEV_CRYPTO=0
+# CONFIG_APP_LEDS_PERM_DEV_BUSES is not set
+# CONFIG_APP_LEDS_PERM_DEV_EXTI is not set
+# CONFIG_APP_LEDS_PERM_DEV_TIM is not set
+
+#
+# Time
+#
+CONFIG_APP_LEDS_PERM_TIM_GETCYCLES=2
+
+#
+# Tasking
+#
+# CONFIG_APP_LEDS_PERM_TSK_FISR is not set
+# CONFIG_APP_LEDS_PERM_TSK_FIPC is not set
+# CONFIG_APP_LEDS_PERM_TSK_RESET is not set
+# CONFIG_APP_LEDS_PERM_TSK_UPGRADE is not set
+
+#
+# Memory management
+#
+# CONFIG_APP_LEDS_PERM_MEM_DYNAMIC_MAP is not set
+
+#
+# BUTTON custom app
+#
+CONFIG_APP_BUTTON=y
+CONFIG_APP_BUTTON_FW=y
+CONFIG_APP_BUTTON_NUMSLOTS=1
+CONFIG_APP_BUTTON_STACKSIZE=8192
+# CONFIG_APP_BUTTON_SHM is not set
+
+#
+# Permissions
+#
+
+#
+# Devices
+#
+# CONFIG_APP_BUTTON_PERM_DEV_DMA is not set
+CONFIG_APP_BUTTON_PERM_DEV_CRYPTO=0
+# CONFIG_APP_BUTTON_PERM_DEV_BUSES is not set
+CONFIG_APP_BUTTON_PERM_DEV_EXTI=y
+# CONFIG_APP_BUTTON_PERM_DEV_TIM is not set
+
+#
+# Time
+#
+CONFIG_APP_BUTTON_PERM_TIM_GETCYCLES=2
+
+#
+# Tasking
+#
+# CONFIG_APP_BUTTON_PERM_TSK_FISR is not set
+# CONFIG_APP_BUTTON_PERM_TSK_FIPC is not set
+# CONFIG_APP_BUTTON_PERM_TSK_RESET is not set
+# CONFIG_APP_BUTTON_PERM_TSK_UPGRADE is not set
+
+#
+# Memory management
+#
+# CONFIG_APP_BUTTON_PERM_MEM_DYNAMIC_MAP is not set
+
+#
+# BLINKY custom app
+#
+# CONFIG_APP_BLINKY is not set
+
+#
+# Devices
+#
+# CONFIG_APP_BLINKY_PERM_DEV_DMA is not set
+CONFIG_APP_BLINKY_PERM_DEV_CRYPTO=0
+# CONFIG_APP_BLINKY_PERM_DEV_BUSES is not set
+# CONFIG_APP_BLINKY_PERM_DEV_EXTI is not set
+# CONFIG_APP_BLINKY_PERM_DEV_TIM is not set
+
+#
+# Time
+#
+CONFIG_APP_BLINKY_PERM_TIM_GETCYCLES=0
+
+#
+# Tasking
+#
+# CONFIG_APP_BLINKY_PERM_TSK_FISR is not set
+# CONFIG_APP_BLINKY_PERM_TSK_FIPC is not set
+# CONFIG_APP_BLINKY_PERM_TSK_RESET is not set
+# CONFIG_APP_BLINKY_PERM_TSK_UPGRADE is not set
+
+#
+# Memory management
+#
+# CONFIG_APP_BLINKY_PERM_MEM_DYNAMIC_MAP is not set
+
+#
+# BENCHLOG custom app
+#
+# CONFIG_APP_BENCHLOG is not set
+
+#
+# Configuring communication permissions for appliations
+#
+
+#
+# Applications IPC and SHM
+#
+CONFIG_NEED_IPC=y
+CONFIG_IPC=y
+
+#
+# --------- BLINKY LEDS BUTTON
+#
+
+#
+# BLINKY      [#]   [ ]   [ ]
+#
+
+#
+# LEDS        [ ]   [#]   [1]
+#
+
+#
+# BUTTON      [ ]   [1]   [#]
+#
+CONFIG_DMA_SHM=y
+
+#
+# --------- BLINKY LEDS BUTTON
+#
+
+#
+# BLINKY      [#]   [ ]   [ ]
+#
+
+#
+# LEDS        [ ]   [#]   [ ]
+#
+
+#
+# BUTTON      [ ]   [ ]   [#]
+#
+CONFIG_SHM=y
+CONFIG_FIRMWARE=y
+
+#
+# External tooling and libs
+#
+CONFIG_EXTERNALS=y
+CONFIG_USR_LIB_SIGN=y
+CONFIG_USR_LIB_SIGN_CFLAGS=" -I../../externals/libecc/src "
+
+#
+# libsign features
+#
+CONFIG_ECC_CURVENAME_FR256=y
+# CONFIG_ECC_CURVENAME_SP256 is not set
+# CONFIG_ECC_CURVENAME_BP256 is not set
+CONFIG_ECC_CURVNAME="FRP256V1"
+# CONFIG_EXT_GP_PRO is not set
+# CONFIG_EXT_ANT_JAVACARD is not set
+# CONFIG_EXT_SECAES is not set
+
+#
+# Block device FDE (Full Disk Encryption) options
+#
+# CONFIG_USB_DEV_SCSI_BLOCK_SIZE_512 is not set
+# CONFIG_USB_DEV_SCSI_BLOCK_SIZE_1024 is not set
+# CONFIG_USB_DEV_SCSI_BLOCK_SIZE_2048 is not set
+CONFIG_USB_DEV_SCSI_BLOCK_SIZE_4096=y
+# CONFIG_USB_DEV_SCSI_BLOCK_SIZE_8192 is not set
+CONFIG_AES256_CBC_ESSIV=y
+# CONFIG_TDES_CBC_ESSIV is not set
+
+#
+# Firmware options
+#
+CONFIG_FIRMWARE_MODE_MONO_BANK=y
+# CONFIG_FIRMWARE_MODE_MONO_BANK_DFU is not set
+CONFIG_FIRMWARE_BUILD_MODE_DEBUG=y
+# CONFIG_FIRMWARE_BUILD_MODE_PROD is not set
+# CONFIG_FIRMWARE_DUALBANK is not set
+# CONFIG_FIRMWARE_DFU is not set
+
+#
+# Global compile options
+#
+# CONFIG_OPTIM_NONE is not set
+# CONFIG_OPTIM_PERF1 is not set
+# CONFIG_OPTIM_PERF2 is not set
+# CONFIG_OPTIM_PERF3 is not set
+CONFIG_OPTIM_SIZE=y
+CONFIG_DBGFLAGS_GCC="-ggdb -Os"
+CONFIG_DBGFLAGS_LLVM="-ggdb -Os"
+CONFIG_STACK_PROT_FLAG=y
+CONFIG_WARNFLAGS_GCC="-Wl,--gc-sections -Wall -Werror -Wextra -Wno-reserved-id-macro -Wno-padded -Wno-packed -Wno-covered-switch-default -Wno-used-but-marked-unused -Wno-unused-but-set-variable -Wno-unused-function -Werror"
+CONFIG_WARNFLAGS_LLVM="-fintegrated-as -sed-command-line-argument -Wno-incompatible-library-redeclaration -Wall -Werror -Wextra -Wno-reserved-id-macro -Wno-padded -Wno-packed -Wno-covered-switch-default -Wno-used-but-marked-unused -Wno-unused-function -Werror"
+CONFIG_STACKPROTFLAGS="-fstack-protector-strong"
+CONFIG_EMBEDCFLAGS="-Wl,--gc-sections -ffunction-sections -fno-builtin -ffreestanding -nostdlib -nodefaultlibs"
+CONFIG_EC_UTILS="tools/ec_utils"
+CONFIG_DONE=y
