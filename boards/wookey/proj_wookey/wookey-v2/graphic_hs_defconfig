@@ -907,3 +907,5 @@ CONFIG_WOOKEY=y
 # Userspace drivers library pool
 # Userspace utility libraries
 # Wookey configuration
+CONFIG_LOADER_INVAL_CFLOW_GOTO_ERROR=y
+# CONFIG_LOADER_INVAL_CFLOW_GOTO_SECBREACH is not set

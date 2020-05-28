@@ -442,3 +442,5 @@ CONFIG_STACKPROTFLAGS="-fstack-protector-strong"
 CONFIG_EMBEDCFLAGS="-Wl,--gc-sections -ffunction-sections -fno-builtin -ffreestanding -nostdlib -nodefaultlibs"
 CONFIG_EC_UTILS="tools/ec_utils"
 CONFIG_DONE=y
+CONFIG_LOADER_INVAL_CFLOW_GOTO_ERROR=y
+# CONFIG_LOADER_INVAL_CFLOW_GOTO_SECBREACH is not set
