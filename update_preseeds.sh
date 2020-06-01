@@ -81,6 +81,12 @@ echo "[+] starting preseed file update"
 
 cp $tmp_newpreseed $preseed
 
+# here, we save back a clean preseed content (not a sort|uniq one)
+rm ../.config
+make -C .. $preseed_target
+cp ../.config $preseed
+
+
 echo "[+] preseed update done."
 
 exit 0;
