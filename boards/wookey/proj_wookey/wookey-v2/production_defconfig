@@ -157,14 +157,14 @@ CONFIG_USR_DRV_CRYP=y
 CONFIG_USR_DRV_HASH=y
 CONFIG_USR_DRV_AD7843=y
 CONFIG_USR_DRV_ILI9341=y
-CONFIG_USR_DRV_SDIO_CFLAGS=" -I@PROJFILES@/drivers/socs//sdio/api "
-CONFIG_USR_DRV_DRVISO7816_CFLAGS=" -I@PROJFILES@/drivers/socs//drviso7816/api "
-CONFIG_USR_DRV_SPI_CFLAGS=" -I@PROJFILES@/drivers/socs//spi/api "
-CONFIG_USR_DRV_USB_CFLAGS=" -I@PROJFILES@/drivers/socs//usb/api "
-CONFIG_USR_DRV_USART_CFLAGS=" -I@PROJFILES@/drivers/socs//usart/api "
-CONFIG_USR_DRV_FLASH_CFLAGS=" -I@PROJFILES@/drivers/socs//flash/api "
-CONFIG_USR_DRV_CRYP_CFLAGS=" -I@PROJFILES@/drivers/socs//cryp/api "
-CONFIG_USR_DRV_HASH_CFLAGS=" -I@PROJFILES@/drivers/socs//hash/api "
+CONFIG_USR_DRV_SDIO_CFLAGS=" -I@PROJFILES@/drivers/socs/stm32f439/sdio/api "
+CONFIG_USR_DRV_DRVISO7816_CFLAGS=" -I@PROJFILES@/drivers/socs/stm32f439/drviso7816/api "
+CONFIG_USR_DRV_SPI_CFLAGS=" -I@PROJFILES@/drivers/socs/stm32f439/spi/api "
+CONFIG_USR_DRV_USB_CFLAGS=" -I@PROJFILES@/drivers/socs/stm32f439/usb/api "
+CONFIG_USR_DRV_USART_CFLAGS=" -I@PROJFILES@/drivers/socs/stm32f439/usart/api "
+CONFIG_USR_DRV_FLASH_CFLAGS=" -I@PROJFILES@/drivers/socs/stm32f439/flash/api "
+CONFIG_USR_DRV_CRYP_CFLAGS=" -I@PROJFILES@/drivers/socs/stm32f439/cryp/api "
+CONFIG_USR_DRV_HASH_CFLAGS=" -I@PROJFILES@/drivers/socs/stm32f439/hash/api "
 # CONFIG_DRV_OPTIM_NONE is not set
 # CONFIG_DRV_OPTIM_PERF1 is not set
 # CONFIG_DRV_OPTIM_PERF2 is not set
